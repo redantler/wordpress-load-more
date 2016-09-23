@@ -1,0 +1,15 @@
+<header class="header js-text-load">
+  {% block header %}
+    <div class="header--wrapper">
+      <div class="header--navigation">
+        <ul class="nav">
+          {% for item in menu.get_items %}
+            <li class="nav-item {{item.classes | join(' ')}}">
+              <a class="nav-link" href="{{item.get_link}}">{{item.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endblock %}
+</header>

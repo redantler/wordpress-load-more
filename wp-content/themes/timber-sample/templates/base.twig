@@ -1,0 +1,32 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+	<!-- Google Tag Manager -->
+		{% include 'global/header.twig' %}
+
+		{% block title %}
+		{% endblock %}
+
+		<section id="content" role="main" class="content-wrapper">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer" class="footer">
+				{% include 'global/footer.twig' %}
+			</footer>
+
+			<script type="text/javascript" src="{{site.theme.link}}/assets/dist/bundle.js"></script>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	  <script src="http://localhost:35729/livereload.js" async></script>
+	</body>
+</html>

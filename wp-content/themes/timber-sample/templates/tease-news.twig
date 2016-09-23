@@ -1,0 +1,14 @@
+<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+	{% block content %}
+		<div>
+			<img class="tease--news-image" src="{{post.thumbnail.src}}">
+			<span class="tease--date">{{ post.date|date("M d Y") }}</span>
+		</div>
+		<div class="tease--text-content">
+			<h5>{{post.title}}</h5>
+			<div class="tease--text-content">
+				{{post.content}}
+			</div>
+		</div>
+	{% endblock %}
+</article>

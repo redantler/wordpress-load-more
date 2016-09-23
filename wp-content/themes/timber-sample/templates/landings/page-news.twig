@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<div class="news">
+
+  <section class="news--module">
+    <div class="news--grid js-c-grid">
+      {% for post in posts %}
+        {% include ['tease-news.twig', 'tease.twig'] %}
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <div class="news--more">
+    {% if pagination.next %}
+      <a class="btn btn--black js-load-more">Load More</a>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
